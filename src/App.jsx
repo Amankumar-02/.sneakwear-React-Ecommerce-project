@@ -1,5 +1,5 @@
 import './App.css';
-import {Header, Home, Footer} from './components/index.js'
+import {Header, Home, Footer} from './components/Index.js'
 
 function App() {
   return (
