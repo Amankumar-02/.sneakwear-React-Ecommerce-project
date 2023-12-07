@@ -65,7 +65,7 @@ function Home() {
       </div>
       ))}
     </div>
-    <div className="product bg-contain sm:bg-cover">
+    <div className="product">
       <img src={productData[0].img1} alt="product1" className='w-[50%] absolute top-[-4%] left-[2%] rotate-[12deg]' />
       <div className="productDetails absolute top-[2%] right-0 w-[40%] p-[50px]">
         <h1 className=" productTitle text-[20px] sm:text-[70px] font-bold text-white tracking-[-2px]">Air Force</h1>
@@ -81,8 +81,7 @@ function Home() {
         <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">43</div>
         <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">44</div>
       </div>
-      {/* <button className="productButton absolute text-white top-[70%] sm:bottom-[10%] right-[4%] sm:right-[31%] text-center text-xs sm:text-[14px] font-black border border-gray-500 cursor-pointer bg-black py-1 sm:py-2 px-1 sm:px-4 hover:text-black hover:bg-white rounded-lg">Buy Now!</button> */}
-      <button className="productButton cursor-pointer bg-black text-white text-[18px] rounded-lg py-1 sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[14%] right-[28%]">Buy Now</button>
+      <button className="productButton cursor-pointer bg-black text-white text-[18px] rounded-lg py-1 sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[14%] right-[28%] hover:text-black hover:bg-white hover:font-semibold">Buy Now</button>
     </div>
     </>
   )
