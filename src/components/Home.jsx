@@ -13,10 +13,10 @@ function Home() {
     {img:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/479182a9-ff0e-4bf6-814d-0aca04cd0706/variations/Default_green_air_jordan_sneaker_3_479182a9-ff0e-4bf6-814d-0aca04cd0706_0.png", color:"bg-green-500", text:"text-green-500"},
   ]
   const featureData = [
-    {img:"https://img.icons8.com/?size=200&id=8290&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/free-shipping.png", title:"FREE SHIPPING", desc:"Free Worldwide Shipping On All Orders."},
-    {img:"https://img.icons8.com/?size=200&id=UhclbL6j7ysE&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/return-purchase.png", title:"30 DAYS RETURN", desc:"Easy Refund In 14 Days"},
-    {img:"https://img.icons8.com/?size=200&id=36069&format=png&color=EF4444", img2:"https://img.icons8.com/external-icongeek26-outline-icongeek26/200/EF4444/external-Gift-Card-e-commerce-icongeek26-outline-icongeek26.png", title:"GIFT CARDS", desc:"Buy Gifts Card And Use Coupon Code Easily"},
-    {img:"https://img.icons8.com/?size=200&id=t1QhJ1rCvYZA&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/paper-plane.png", title:"CONTACT US", desc:"Keep In Touch Via Email And Support System."},
+    {img:"https://img.icons8.com/?size=200&id=8290&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/free-shipping.png", title:"Free Shipping", desc:"Free Worldwide Shipping On All Orders."},
+    {img:"https://img.icons8.com/?size=200&id=UhclbL6j7ysE&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/return-purchase.png", title:"30 Days Return", desc:"Easy Refund In 14 Days"},
+    {img:"https://img.icons8.com/?size=200&id=36069&format=png&color=EF4444", img2:"https://img.icons8.com/external-icongeek26-outline-icongeek26/200/EF4444/external-Gift-Card-e-commerce-icongeek26-outline-icongeek26.png", title:"Gift Cards", desc:"Buy Gifts Card And Use Coupon Code Easily"},
+    {img:"https://img.icons8.com/?size=200&id=t1QhJ1rCvYZA&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/paper-plane.png", title:"Contact Us", desc:"Keep In Touch Via Email And Support System."},
   ]
   const storeData = useSelector(state=>state.slider);
   return (
@@ -47,12 +47,12 @@ function Home() {
         ))}
       </div>
     </div>
-    <div className="features flex items-start sm:items-center justify-between p-[10px] sm:p-[50px]">
+    <div className="features flex items-start justify-between p-[10px] sm:p-[50px]">
       {featureData.map((data, index)=>(
       <div key={index} className="feature flex flex-col items-center text-center sm:w-[20vw]">
-        {/* <img src={data.img} alt="" className="featureImg" /> */}
+        {/* <img src={data.img} alt="" className='h-[60%] sm:h-[45%] w-[60%] sm:w-[45%] cursor-pointer' /> */}
         <img src={data.img2} alt="free-shipping" className='h-[60%] sm:h-[45%] w-[60%] sm:w-[45%] cursor-pointer'/>
-        <span className="featureTitle font-semibold text-[10px] sm:text-[17px]">{data.title}</span>
+        <span className="featureTitle font-semibold text-[10px] sm:text-[17px] pt-1 uppercase">{data.title}</span>
         <span className="featureDesc text-[8px] sm:text-[15px] w-[80%] sm:w-[50%] text-gray-500">{data.desc}</span>
       </div>
       ))}
