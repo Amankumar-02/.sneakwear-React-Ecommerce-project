@@ -26,6 +26,38 @@ function Home() {
       desc:"",
       color:"",
     },
+    {
+      img1:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/64978af8-f8a5-4daf-9790-fabbaa1dd930/variations/Default_green_air_jordan_sneaker_2_64978af8-f8a5-4daf-9790-fabbaa1dd930_0.png",
+      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/fb5734ff-020c-4a8d-8407-52da9fea1af7/variations/Default_nike_air_jordan_orange_sneaker_2_fb5734ff-020c-4a8d-8407-52da9fea1af7_0.png",
+      title:"",
+      price:"",
+      desc:"",
+      color:"",
+    },
+    {
+      img1:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/cf883e79-4fa3-4313-aba8-d178a058ca42/variations/Default_nike_air_jordan_gray_sneaker_0_cf883e79-4fa3-4313-aba8-d178a058ca42_0.png",
+      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/ce427f89-ba5d-4c83-957c-a1afdc7d85e6/variations/Default_nike_air_jordan_dark_blue_sneaker_1_ce427f89-ba5d-4c83-957c-a1afdc7d85e6_0.png",
+      title:"",
+      price:"",
+      desc:"",
+      color:"",
+    },
+    {
+      img1:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/1cf3721e-8eb6-4a6d-bbea-75d1af8ae239/variations/Default_create_high_quality_image_with_air_jordan_shoe_in_yell_2_1cf3721e-8eb6-4a6d-bbea-75d1af8ae239_0.png?w=512",
+      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/ce427f89-ba5d-4c83-957c-a1afdc7d85e6/variations/Default_nike_air_jordan_dark_blue_sneaker_1_ce427f89-ba5d-4c83-957c-a1afdc7d85e6_0.png",
+      title:"",
+      price:"",
+      desc:"",
+      color:"",
+    },
+    {
+      img1:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/d06f89d4-7fee-4f7c-b49b-656ed964069a/variations/Default_create_high_quality_image_with_nike_shoe_3_d06f89d4-7fee-4f7c-b49b-656ed964069a_0.png",
+      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/5e134d85-5475-41c2-bc7f-b651e3185e2f/variations/Default_nike_air_jordan_blue_sneaker_0_5e134d85-5475-41c2-bc7f-b651e3185e2f_0.png",
+      title:"",
+      price:"",
+      desc:"",
+      color:"",
+    },
   ]
   const storeData = useSelector(state=>state.slider);
   return (
@@ -65,7 +97,8 @@ function Home() {
       </div>
       ))}
     </div>
-    <div className="product">
+    <div 
+    className="product">
       <img src={productData[0].img1} alt="product1" className='w-[50%] absolute top-[-4%] left-[2%] rotate-[12deg]' />
       <div className="productDetails absolute top-[2%] right-0 w-[40%] p-[50px]">
         <h1 className=" productTitle text-[20px] sm:text-[70px] font-bold text-white tracking-[-2px]">Air Force</h1>
