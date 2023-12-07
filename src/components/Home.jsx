@@ -11,13 +11,13 @@ function Home() {
     {img:slide4, color:"bg-blue-500", text:"text-blue-500"},
     {img:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/479182a9-ff0e-4bf6-814d-0aca04cd0706/variations/Default_green_air_jordan_sneaker_3_479182a9-ff0e-4bf6-814d-0aca04cd0706_0.png", color:"bg-green-500", text:"text-green-500"},
   ]
-  const storeData = useSelector(state=>state.slider.transform);
+  const storeData = useSelector(state=>state.slider);
   console.log(storeData)
   return (
     <>
     <div className="slider bg-[url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)] bg-cover bg-center bg-no-repeat w-full overflow-hidden"
     >
-      <div className={`sliderWrapper flex w-[500vw] ${storeData}`}>
+      <div className={`sliderWrapper flex w-[500vw]`} style={storeData}>
         {slideData.map((data, index)=>(
           <div key={index} className="sliderItem relative flex items-center justify-center w-full h-[240px] sm:h-[500px]">
           <img src={data.img} alt="slide1" className='absolute 

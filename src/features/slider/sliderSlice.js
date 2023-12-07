@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-    slider: {transform: 'translate-x-[0vw]'}
+    slider: {transform: 'translateX(0vw)'}
 }
 
 export const slideSlice = createSlice({

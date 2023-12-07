@@ -14,7 +14,7 @@ function Header() {
   ]
   let dispatch  = useDispatch();
   const slider = (index)=>{
-    dispatch(updateStyle(`translate-x-[-${index*100}vw]`))
+    dispatch(updateStyle(`translateX(-${index*100}vw)`))
   };
   return (
     <>
