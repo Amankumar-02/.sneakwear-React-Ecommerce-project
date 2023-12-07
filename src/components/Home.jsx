@@ -1,7 +1,6 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 import slide4 from '../img/slide4a.png'
-import returnCart from '../img/returnCart.png'
 import { useSelector } from 'react-redux'
 
 function Home() {
@@ -18,6 +17,16 @@ function Home() {
     {img:"https://img.icons8.com/?size=200&id=36069&format=png&color=EF4444", img2:"https://img.icons8.com/external-icongeek26-outline-icongeek26/200/EF4444/external-Gift-Card-e-commerce-icongeek26-outline-icongeek26.png", title:"Gift Cards", desc:"Buy Gifts Card And Use Coupon Code Easily"},
     {img:"https://img.icons8.com/?size=200&id=t1QhJ1rCvYZA&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/paper-plane.png", title:"Contact Us", desc:"Keep In Touch Via Email And Support System."},
   ]
+  const productData = [
+    {
+      img1:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/765d30d8-2833-4686-8a15-a82103548ec1/variations/Default_white_air_jordan_sneaker_2_765d30d8-2833-4686-8a15-a82103548ec1_0.png",
+      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/ce427f89-ba5d-4c83-957c-a1afdc7d85e6/variations/Default_nike_air_jordan_dark_blue_sneaker_1_ce427f89-ba5d-4c83-957c-a1afdc7d85e6_0.png",
+      title:"",
+      price:"",
+      desc:"",
+      color:"",
+    },
+  ]
   const storeData = useSelector(state=>state.slider);
   return (
     <>
@@ -29,10 +38,8 @@ function Home() {
           <div key={index} className="sliderItem relative flex items-center justify-center w-full h-[240px] sm:h-[500px]">
           <img src={data.img} alt="slide1" className='absolute 
           sm:top-[-10px]
-          sm:h-[500px] 
-          sm:h-[80vh] 
-          sm:h-[100%]
-          h-[85%]
+          h-[84%]
+          sm:h-[80vh]
           rotate-[10deg]
           z-[999]
           '/> 
@@ -47,7 +54,8 @@ function Home() {
         ))}
       </div>
     </div>
-    <div className="features flex items-start justify-between p-[10px] sm:p-[50px]">
+    <div 
+    className="features flex items-start justify-between p-[10px] sm:p-[50px]">
       {featureData.map((data, index)=>(
       <div key={index} className="feature flex flex-col items-center text-center sm:w-[20vw]">
         {/* <img src={data.img} alt="" className='h-[60%] sm:h-[45%] w-[60%] sm:w-[45%] cursor-pointer' /> */}
@@ -56,6 +64,25 @@ function Home() {
         <span className="featureDesc text-[8px] sm:text-[15px] w-[80%] sm:w-[50%] text-gray-500">{data.desc}</span>
       </div>
       ))}
+    </div>
+    <div className="product bg-contain sm:bg-cover">
+      <img src={productData[0].img1} alt="product1" className='w-[50%] absolute top-[-4%] left-[2%] rotate-[12deg]' />
+      <div className="productDetails absolute top-[2%] right-0 w-[40%] p-[50px]">
+        <h1 className=" productTitle text-[20px] sm:text-[70px] font-bold text-white tracking-[-2px]">Air Force</h1>
+        <h2 className="productPrice text-white text-[30px] my-[10px]">$199</h2>
+        <p className='productDesc text-[18px] text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum ad earum necessitatibus quidem. Dolorum tempore earum exercitationem sunt sed natus, cupiditate iusto fugiat quasi inventore, quod vitae alias eum.</p>
+      </div>
+      <div className="colors absolute bottom-[34%] right-[31%] flex">
+        <div className="color bg-[#fff] h-[30px] w-[30px] rounded-md me-[10px] cursor-pointer hover:border-[2px] hover:border-black"></div>
+        <div className="color bg-[#0000ff] h-[30px] w-[30px] rounded-md cursor-pointer hover:border-[2px] hover:border-black"></div>
+      </div>
+      <div className="sizes absolute bottom-[24%] right-[21%] flex">
+        <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">42</div>
+        <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">43</div>
+        <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">44</div>
+      </div>
+      {/* <button className="productButton absolute text-white top-[70%] sm:bottom-[10%] right-[4%] sm:right-[31%] text-center text-xs sm:text-[14px] font-black border border-gray-500 cursor-pointer bg-black py-1 sm:py-2 px-1 sm:px-4 hover:text-black hover:bg-white rounded-lg">Buy Now!</button> */}
+      <button className="productButton cursor-pointer bg-black text-white text-[18px] rounded-lg py-1 sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[14%] right-[28%]">Buy Now</button>
     </div>
     </>
   )
