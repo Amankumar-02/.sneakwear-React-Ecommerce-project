@@ -27,5 +27,5 @@
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%)
 }
 .sliderWrapper{
-  transition: all 0.6s linear;
+  transition: all 0.6s ease-in-out;
 }

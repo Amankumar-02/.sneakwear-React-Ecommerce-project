@@ -1,6 +1,7 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 import slide4 from '../img/slide4a.png'
+import returnCart from '../img/returnCart.png'
 import { useSelector } from 'react-redux'
 
 function Home() {
@@ -11,11 +12,17 @@ function Home() {
     {img:slide4, color:"bg-blue-500", text:"text-blue-500"},
     {img:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/479182a9-ff0e-4bf6-814d-0aca04cd0706/variations/Default_green_air_jordan_sneaker_3_479182a9-ff0e-4bf6-814d-0aca04cd0706_0.png", color:"bg-green-500", text:"text-green-500"},
   ]
+  const featureData = [
+    {img:"https://img.icons8.com/?size=200&id=8290&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/free-shipping.png", title:"FREE SHIPPING", desc:"Free Worldwide Shipping On All Orders."},
+    {img:"https://img.icons8.com/?size=200&id=UhclbL6j7ysE&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/return-purchase.png", title:"30 DAYS RETURN", desc:"Easy Refund In 14 Days"},
+    {img:"https://img.icons8.com/?size=200&id=36069&format=png&color=EF4444", img2:"https://img.icons8.com/external-icongeek26-outline-icongeek26/200/EF4444/external-Gift-Card-e-commerce-icongeek26-outline-icongeek26.png", title:"GIFT CARDS", desc:"Buy Gifts Card And Use Coupon Code Easily"},
+    {img:"https://img.icons8.com/?size=200&id=t1QhJ1rCvYZA&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/paper-plane.png", title:"CONTACT US", desc:"Keep In Touch Via Email And Support System."},
+  ]
   const storeData = useSelector(state=>state.slider);
-  console.log(storeData)
   return (
     <>
-    <div className="slider bg-[url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)] bg-cover bg-center bg-no-repeat w-full overflow-hidden"
+    <div 
+    className="slider bg-[url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)] bg-cover bg-center bg-no-repeat w-full overflow-hidden"
     >
       <div className={`sliderWrapper flex w-[500vw]`} style={storeData}>
         {slideData.map((data, index)=>(
@@ -38,25 +45,18 @@ function Home() {
           <button className="buyButton absolute text-white top-[70%] sm:top-[65%] right-[4%] sm:right-[10%] text-center text-xs sm:text-[28px] font-black border border-gray-500 cursor-pointer bg-black py-1 sm:py-4 px-1 sm:px-4 hover:text-black hover:bg-white rounded-lg">Buy Now!</button>
         </div>
         ))}
-        {/* <div className="sliderItem relative flex items-center justify-center w-full h-[240px] sm:h-[500px]">
-          <img src={slideData[4].img} alt="slide1" className='absolute 
-          sm:top-[-10px]
-          sm:h-[500px] 
-          sm:h-[80vh] 
-          sm:h-[100%]
-          h-[85%]
-          rotate-[10deg]
-          '/> 
-          <div className={`slideBg absolute w-[220px] sm:w-[500px] h-[220px] sm:h-[500px] rounded-[50%] ${slideData[4].color} -z-10 top-[10px] sm:top-[-2px] left-[50%] translate-x-[-50%]`}></div>
-          <h1 className='sliderTitle absolute text-white top-[12%] sm:top-[30%] left-[8%] sm:left-[76%] sm:text-center text-[18spx] sm:text-[40px] leading-[1.2] font-black'>Air Force <br /> New <br /> Season</h1>
-          <p className="slidePrice absolute text-white top-[40%] left-[8%] sm:left-[10%] text-center text-[5vw]">$119
-          <div className={`priceProgressBar ${slideData[4].color} h-[2px] sm:h-[4px] mt-[-4px] sm:mt-[-14px]`}></div>
-          </p>
-          <button className="buyButton absolute text-white top-[70%] sm:top-[65%] right-[4%] sm:right-[10%] text-center text-xs sm:text-[28px] font-black border border-gray-500 cursor-pointer bg-black py-1 sm:py-4 px-1 sm:px-4 hover:text-black hover:bg-white rounded-lg">Buy Now!</button>
-        </div> */}
       </div>
     </div>
-    <h1>next</h1>
+    <div className="features flex items-start sm:items-center justify-between p-[10px] sm:p-[50px]">
+      {featureData.map((data, index)=>(
+      <div key={index} className="feature flex flex-col items-center text-center sm:w-[20vw]">
+        {/* <img src={data.img} alt="" className="featureImg" /> */}
+        <img src={data.img2} alt="free-shipping" className='h-[60%] sm:h-[45%] w-[60%] sm:w-[45%] cursor-pointer'/>
+        <span className="featureTitle font-semibold text-[10px] sm:text-[17px]">{data.title}</span>
+        <span className="featureDesc text-[8px] sm:text-[15px] w-[80%] sm:w-[50%] text-gray-500">{data.desc}</span>
+      </div>
+      ))}
+    </div>
     </>
   )
 }
