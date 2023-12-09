@@ -18,7 +18,7 @@ function Header() {
   };
   return (
     <>
-      <div className="bg-black text-white pt-[4px] sm:pt-[20px] pb-[8px] px-[20px] sm:px-[40px] sticky top-0 left-0 sm:relative z-50 border-b border-gray-300">
+      <div className="bg-black text-white pt-[4px] sm:pt-[20px] pb-[8px] px-[20px] sm:px-[40px] sticky lg:sticky top-0 left-0 sm:relative z-50 border-b border-gray-300">
         <div className="navTop flex flex-col sm:flex-row items-center justify-between">
           <div className="navItem">
             <h1 className="text-[1.5em] font-semibold">.Sneakwear</h1>

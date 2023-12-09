@@ -26,7 +26,7 @@
 .slider{
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%)
 }
-.sliderWrapper{
+.sliderWrapper, .productWrapper{
   transition: all 0.6s ease-in-out;
 }
 .product{
@@ -40,5 +40,6 @@
   background-position:bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  /* height: 84vh; */
+  height: 500px;
 }
