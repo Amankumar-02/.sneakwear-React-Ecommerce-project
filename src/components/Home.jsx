@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'remixicon/fonts/remixicon.css'
 import { useSelector } from 'react-redux'
 
@@ -16,49 +16,97 @@ function Home() {
     {img:"https://img.icons8.com/?size=200&id=36069&format=png&color=EF4444", img2:"https://img.icons8.com/external-icongeek26-outline-icongeek26/200/EF4444/external-Gift-Card-e-commerce-icongeek26-outline-icongeek26.png", title:"Gift Cards", desc:"Buy Gifts Card And Use Coupon Code Easily"},
     {img:"https://img.icons8.com/?size=200&id=t1QhJ1rCvYZA&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/paper-plane.png", title:"Contact Us", desc:"Keep In Touch Via Email And Support System."},
   ]
-  const productData = [
+  const [productData, setProductData] = useState([
     {
-      img1:"https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/f6237ddb-744b-4255-8f04-bf20a0ac1bd2/variations/Default_nike_air_jordan_shoes_3_f6237ddb-744b-4255-8f04-bf20a0ac1bd2_0.png",
-      img2:"https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/240bf4c6-d397-4ab2-b990-d0c8086947ce/variations/Default_air_jordan_0_240bf4c6-d397-4ab2-b990-d0c8086947ce_0.png",
-      title:"",
-      price:"",
-      desc:"",
-      color:"",
+      title: "",
+      price: "",
+      desc: "",
+      displayImg:"https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/f6237ddb-744b-4255-8f04-bf20a0ac1bd2/variations/Default_nike_air_jordan_shoes_3_f6237ddb-744b-4255-8f04-bf20a0ac1bd2_0.png",
+      item1: {
+        img: "https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/f6237ddb-744b-4255-8f04-bf20a0ac1bd2/variations/Default_nike_air_jordan_shoes_3_f6237ddb-744b-4255-8f04-bf20a0ac1bd2_0.png",
+        color: "#D7262A",
+      },
+      item2: {
+        img: "https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/240bf4c6-d397-4ab2-b990-d0c8086947ce/variations/Default_air_jordan_0_240bf4c6-d397-4ab2-b990-d0c8086947ce_0.png",
+        color: "#8F2525",
+      },
     },
     {
-      img1:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/fb5734ff-020c-4a8d-8407-52da9fea1af7/variations/Default_nike_air_jordan_orange_sneaker_2_fb5734ff-020c-4a8d-8407-52da9fea1af7_0.png",
-      img2:"https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/9a2b1093-22da-443e-8831-afca5e3fb0d5/variations/Default_nike_air_jordan_shoes_1_9a2b1093-22da-443e-8831-afca5e3fb0d5_0.png",
-      title:"",
-      price:"",
-      desc:"",
-      color:"",
+      title: "",
+      price: "",
+      desc: "",
+      displayImg:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/fb5734ff-020c-4a8d-8407-52da9fea1af7/variations/Default_nike_air_jordan_orange_sneaker_2_fb5734ff-020c-4a8d-8407-52da9fea1af7_0.png",
+      item1: {
+        img: "https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/fb5734ff-020c-4a8d-8407-52da9fea1af7/variations/Default_nike_air_jordan_orange_sneaker_2_fb5734ff-020c-4a8d-8407-52da9fea1af7_0.png",
+        color: "#FC7B2D",
+      },
+      item2: {
+        img: "https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/9a2b1093-22da-443e-8831-afca5e3fb0d5/variations/Default_nike_air_jordan_shoes_1_9a2b1093-22da-443e-8831-afca5e3fb0d5_0.png",
+        color: "#B4B3B7",
+      },
     },
     {
-      img1:"https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/a1b280f1-8dfd-4201-88fe-07ac1cc8aba7/variations/Default_Nike_Shoes_3_a1b280f1-8dfd-4201-88fe-07ac1cc8aba7_0.png",
-      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/d06f89d4-7fee-4f7c-b49b-656ed964069a/variations/Default_create_high_quality_image_with_nike_shoe_3_d06f89d4-7fee-4f7c-b49b-656ed964069a_0.png",
-      title:"",
-      price:"",
-      desc:"",
-      color:"",
+      title: "",
+      price: "",
+      desc: "",
+      displayImg:"https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/a1b280f1-8dfd-4201-88fe-07ac1cc8aba7/variations/Default_Nike_Shoes_3_a1b280f1-8dfd-4201-88fe-07ac1cc8aba7_0.png",
+      item1: {
+        img: "https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/a1b280f1-8dfd-4201-88fe-07ac1cc8aba7/variations/Default_Nike_Shoes_3_a1b280f1-8dfd-4201-88fe-07ac1cc8aba7_0.png",
+        color: "#7EA9B1",
+      },
+      item2: {
+        img: "https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/d06f89d4-7fee-4f7c-b49b-656ed964069a/variations/Default_create_high_quality_image_with_nike_shoe_3_d06f89d4-7fee-4f7c-b49b-656ed964069a_0.png",
+        color: "#2EBAC7",
+      },
     },
     {
-      img1:"https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/b6a4dc15-0862-4f73-bf3b-206662d203aa/variations/Default_air_jordan_2_b6a4dc15-0862-4f73-bf3b-206662d203aa_0.png",
-      img2:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/cf883e79-4fa3-4313-aba8-d178a058ca42/variations/Default_nike_air_jordan_gray_sneaker_0_cf883e79-4fa3-4313-aba8-d178a058ca42_0.png",
-      title:"",
-      price:"",
-      desc:"",
-      color:"",
+      title: "",
+      price: "",
+      desc: "",
+      displayImg:"https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/b6a4dc15-0862-4f73-bf3b-206662d203aa/variations/Default_air_jordan_2_b6a4dc15-0862-4f73-bf3b-206662d203aa_0.png",
+      item1: {
+        img: "https://cdn.leonardo.ai/users/9e51583c-3ad7-46cd-8cb1-d09fc26ccdbf/generations/b6a4dc15-0862-4f73-bf3b-206662d203aa/variations/Default_air_jordan_2_b6a4dc15-0862-4f73-bf3b-206662d203aa_0.png",
+        color: "#7E7D80",
+      },
+      item2: {
+        img: "https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/cf883e79-4fa3-4313-aba8-d178a058ca42/variations/Default_nike_air_jordan_gray_sneaker_0_cf883e79-4fa3-4313-aba8-d178a058ca42_0.png",
+        color: "#C1C8D2",
+      },
     },
     {
-      img1:"https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/54a1cb9a-9528-4a5d-a389-c24494b0fdb9/variations/Default_nike_sneakers_1_54a1cb9a-9528-4a5d-a389-c24494b0fdb9_0.png",
-      img2:"https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/bcabdefd-bdf8-4523-a45d-cc2426d529c9/variations/Default_nike_sneakers_2_bcabdefd-bdf8-4523-a45d-cc2426d529c9_0.png",
-      title:"",
-      price:"",
-      desc:"",
-      color:"",
+      title: "",
+      price: "",
+      desc: "",
+      displayImg:"https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/54a1cb9a-9528-4a5d-a389-c24494b0fdb9/variations/Default_nike_sneakers_1_54a1cb9a-9528-4a5d-a389-c24494b0fdb9_0.png",
+      item1: {
+        img: "https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/54a1cb9a-9528-4a5d-a389-c24494b0fdb9/variations/Default_nike_sneakers_1_54a1cb9a-9528-4a5d-a389-c24494b0fdb9_0.png",
+        color: "#B5BF8A",
+      },
+      item2: {
+        img: "https://cdn.leonardo.ai/users/8d611489-0d5f-4751-a2ec-062c4b782ea8/generations/bcabdefd-bdf8-4523-a45d-cc2426d529c9/variations/Default_nike_sneakers_2_bcabdefd-bdf8-4523-a45d-cc2426d529c9_0.png",
+        color: "#E9A99A",
+      },
     },
-  ]
+  ]);
   const storeData = useSelector(state=>state.slider);
+  const productToggle1 = (index)=>{
+    setProductData(prevProductData => {
+      const updatedProductData = [...prevProductData];
+      const currentItem = { ...updatedProductData[index] };
+      currentItem.displayImg = productData[index].item1.img;
+      updatedProductData[index] = currentItem;
+      return updatedProductData;
+    });
+  }
+  const productToggle2 = (index)=>{
+    setProductData(prevProductData => {
+      const updatedProductData = [...prevProductData];
+      const currentItem = { ...updatedProductData[index] };
+      currentItem.displayImg =  productData[index].item2.img;
+      updatedProductData[index] = currentItem;
+      return updatedProductData;
+    });
+  }
   return (
     <>
     <div 
@@ -96,28 +144,31 @@ function Home() {
       </div>
       ))}
     </div>
-    <div className="products w-full overflow-hidde">
+    <div className="products w-full overflow-hidden">
       <div className="productWrapper flex w-[500vw]" style={storeData}>
         {productData.map((data, index)=>(
           <div
           key={index}
           className="product w-full h-[240px] sm:h-[500px]">
-            <img src={data.img1} alt="product1" className='w-[60%] sm:w-[48%] absolute top-[30px] sm:top-[18px] left-[2%] rotate-[12deg]' />
+            <img src={data.displayImg} alt="product1" className='w-[60%] sm:w-[48%] absolute top-[30px] sm:top-[18px] left-[2%] rotate-[12deg]' />
             <div className="productDetails absolute top-[8%] sm:top-[2%] right-[2%] w-[40%] p-[20px] sm:p-[50px]">
               <h1 className=" productTitle text-[18px] sm:text-[60px] font-bold text-white sm:tracking-[-2px] leading-[1]">Air Force</h1>
               <h2 className="productPrice text-white text-[14px] sm:text-[30px] mt-[4px] sm:mt-[10px]">$199</h2>
               <p className='productDesc1 text-xs sm:text-[16px] text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum ad earum necessitatibus quidem. Dolorum tempore earum exercitationem sunt sed natus, cupiditate iusto fugiat quasi inventore, quod vitae alias eum.</p>
               <p className='productDesc2 text-[9px] sm:text-[16px] text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
+
             <div className="colors absolute bottom-[46%] sm:bottom-[42%] right-[26%] sm:right-[33%] flex">
-              <div className="color bg-[#fff] h-[15px] sm:h-[30px] w-[15px] sm:w-[30px] rounded-sm sm:rounded-md me-[10px] cursor-pointer hover:border-[2px] hover:border-black"></div>
-              <div className="color bg-[#0000ff] h-[15px] sm:h-[30px] w-[15px] sm:w-[30px] rounded-sm sm:rounded-md cursor-pointer hover:border-[2px] hover:border-black"></div>
+              <div className="color h-[15px] sm:h-[30px] w-[15px] sm:w-[30px] rounded-sm sm:rounded-md me-[10px] cursor-pointer hover:border-[2px] hover:border-black" style={{backgroundColor:`${data.item1.color}`}} onClick={()=>productToggle1(index)}></div>
+              <div className="color h-[15px] sm:h-[30px] w-[15px] sm:w-[30px] rounded-sm sm:rounded-md cursor-pointer hover:border-[2px] hover:border-black" style={{backgroundColor:`${data.item2.color}`}} onClick={()=>productToggle2(index)}></div>
             </div>
+
             <div className="sizes absolute bottom-[34%] sm:bottom-[30%] right-[16%] sm:right-[23%] flex">
               <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">42</div>
               <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">43</div>
               <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">44</div>
             </div>
+
             <button className="productButton cursor-pointer bg-black text-white text-[12px] sm:text-[18px] rounded-lg py- sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[22%] sm:bottom-[18%] right-[22%] sm:right-[30%] hover:text-black hover:bg-white hover:font-semibold">Buy Now</button>
           </div>
         ))}
