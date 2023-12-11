@@ -1,6 +1,5 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
-import slide4 from '../img/slide4a.png'
 import { useSelector } from 'react-redux'
 
 function Home() {
@@ -76,7 +75,7 @@ function Home() {
           z-[999]
           '/> 
           <div className={`slideBg absolute w-[220px] sm:w-[500px] h-[220px] sm:h-[500px] rounded-[50%] ${data.color} z-1 top-[10px] sm:top-[-2px] left-[50%] translate-x-[-50%]`}></div>
-          <h1 className='sliderTitle absolute text-white top-[12%] sm:top-[30%] left-[8%] sm:left-[76%] sm:text-center text-[18spx] sm:text-[40px] leading-[1.2] font-black'>Air Force <br /> New <br /> Season</h1>
+          <h1 className='sliderTitle absolute text-white top-[12%] sm:top-[30%] left-[8%] sm:left-[76%] sm:text-center sm:text-[40px] leading-[1.2] font-black'>Air Force <br /> New <br /> Season</h1>
           <div className={`slidePrice absolute ${data.text} top-[40%] left-[8%] sm:left-[10%] text-center text-[5vw]`}>
           <p>$119</p>
           <div className={`priceProgressBar bg-gray-300 h-[2px] sm:h-[4px] mt-[-4px] sm:mt-[-14px]`}></div>
@@ -97,28 +96,29 @@ function Home() {
       </div>
       ))}
     </div>
-    <div className="products w-full overflow-hidden">
+    <div className="products w-full overflow-hidde">
       <div className="productWrapper flex w-[500vw]" style={storeData}>
         {productData.map((data, index)=>(
           <div
           key={index}
-          className="product w-full">
-            <img src={data.img1} alt="product1" className='w-[48%] absolute top-[18px] left-[2%] rotate-[12deg]' />
-            <div className="productDetails absolute top-[2%] right-[2%] w-[40%] p-[50px]">
-              <h1 className=" productTitle text-[20px] sm:text-[60px] font-bold text-white tracking-[-2px] leading-[1]">Air Force</h1>
-              <h2 className="productPrice text-white text-[30px] mt-[10px]">$199</h2>
-              <p className='productDesc text-[16px] text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum ad earum necessitatibus quidem. Dolorum tempore earum exercitationem sunt sed natus, cupiditate iusto fugiat quasi inventore, quod vitae alias eum.</p>
+          className="product w-full h-[240px] sm:h-[500px]">
+            <img src={data.img1} alt="product1" className='w-[60%] sm:w-[48%] absolute top-[30px] sm:top-[18px] left-[2%] rotate-[12deg]' />
+            <div className="productDetails absolute top-[8%] sm:top-[2%] right-[2%] w-[40%] p-[20px] sm:p-[50px]">
+              <h1 className=" productTitle text-[18px] sm:text-[60px] font-bold text-white sm:tracking-[-2px] leading-[1]">Air Force</h1>
+              <h2 className="productPrice text-white text-[14px] sm:text-[30px] mt-[4px] sm:mt-[10px]">$199</h2>
+              <p className='productDesc1 text-xs sm:text-[16px] text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum ad earum necessitatibus quidem. Dolorum tempore earum exercitationem sunt sed natus, cupiditate iusto fugiat quasi inventore, quod vitae alias eum.</p>
+              <p className='productDesc2 text-[9px] sm:text-[16px] text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div className="colors absolute bottom-[38%] right-[33%] flex">
-              <div className="color bg-[#fff] h-[30px] w-[30px] rounded-md me-[10px] cursor-pointer hover:border-[2px] hover:border-black"></div>
-              <div className="color bg-[#0000ff] h-[30px] w-[30px] rounded-md cursor-pointer hover:border-[2px] hover:border-black"></div>
+            <div className="colors absolute bottom-[46%] sm:bottom-[42%] right-[26%] sm:right-[33%] flex">
+              <div className="color bg-[#fff] h-[15px] sm:h-[30px] w-[15px] sm:w-[30px] rounded-sm sm:rounded-md me-[10px] cursor-pointer hover:border-[2px] hover:border-black"></div>
+              <div className="color bg-[#0000ff] h-[15px] sm:h-[30px] w-[15px] sm:w-[30px] rounded-sm sm:rounded-md cursor-pointer hover:border-[2px] hover:border-black"></div>
             </div>
-            <div className="sizes absolute bottom-[26%] right-[23%] flex">
-              <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">42</div>
-              <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">43</div>
-              <div className="size text-[20px] text-white border me-4 border-white rounded-md cursor-pointer py-[0.5vw] px-[1vw] hover:border-[2px] hover:border-black">44</div>
+            <div className="sizes absolute bottom-[34%] sm:bottom-[30%] right-[16%] sm:right-[23%] flex">
+              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">42</div>
+              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">43</div>
+              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">44</div>
             </div>
-            <button className="productButton cursor-pointer bg-black text-white text-[18px] rounded-lg py-1 sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[14%] right-[30%] hover:text-black hover:bg-white hover:font-semibold">Buy Now</button>
+            <button className="productButton cursor-pointer bg-black text-white text-[12px] sm:text-[18px] rounded-lg py- sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[22%] sm:bottom-[18%] right-[22%] sm:right-[30%] hover:text-black hover:bg-white hover:font-semibold">Buy Now</button>
           </div>
         ))}
       </div>
