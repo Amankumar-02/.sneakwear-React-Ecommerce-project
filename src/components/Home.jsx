@@ -165,13 +165,26 @@ function Home() {
             </div>
 
             <div className="sizes absolute bottom-[34%] sm:bottom-[30%] right-[16%] sm:right-[23%] flex">
-              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">42</div>
-              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">43</div>
-              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">44</div>
+              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer py-[0px] sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">42</div>
+              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer py-[0px] sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">43</div>
+              <div className="size text-[12px] sm:text-[20px] text-white border me-2 sm:me-4 border-white rounded-md cursor-pointer py-[0px] sm:py-[0.5vw] px-[2px] sm:px-[1vw] hover:border-[2px] hover:border-black">44</div>
             </div>
 
             <button className="productButton cursor-pointer bg-black text-white text-[12px] sm:text-[18px] rounded-lg py- sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[22%] sm:bottom-[18%] right-[22%] sm:right-[30%] hover:text-black hover:bg-white hover:font-semibold">Buy Now</button>
+
+            <div className="payment absolute top-[-10%] left-[0] right-0 bottom-0 m-auto py-[20px] px-[40px] w-[180px] sm:w-[400px] h-[180px] sm:h-[430px] bg-white flex flex-col rounded-xl">
+            <h1 className="payTitle text-gray-500 text-[20px] font-semibold">Personal Information</h1>
+            <label htmlFor="" className='text-[14px] mt-2'>Name and Surname</label>
+            <input type="text" placeholder='John Doe' className='payInput p-[6px] border-b-2 border-gray-300'/>
+            <label htmlFor="" className='text-[14px] mt-2'>Phone Number</label>
+            <input type="text" placeholder='+1 234 5678' className='payInput p-[6px] border-b-2 border-gray-300'/>
+            <label htmlFor="" className='text-[14px] mt-2'>Address</label>
+            <input type="text" placeholder='Elton St 21-22-145' className='payInput p-[6px] border-b-2 border-gray-300'/>
+            <h1 className="payTitle text-gray-500 text-[20px] mt-2 font-semibold">Card Info</h1>
           </div>
+
+          </div>
+
         ))}
       </div>
     </div>
