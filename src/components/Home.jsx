@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import 'remixicon/fonts/remixicon.css'
 import { useSelector } from 'react-redux'
+import visa from '../img/visa.png'
+import master from '../img/master.png'
 
 function Home() {
   const slideData = [
@@ -180,7 +182,18 @@ function Home() {
             <input type="text" placeholder='+1 234 5678' className='payInput p-[6px] border-b-2 border-gray-300'/>
             <label htmlFor="" className='text-[14px] mt-2'>Address</label>
             <input type="text" placeholder='Elton St 21-22-145' className='payInput p-[6px] border-b-2 border-gray-300'/>
-            <h1 className="payTitle text-gray-500 text-[20px] mt-2 font-semibold">Card Info</h1>
+            <h1 className="payTitle text-gray-500 text-[20px] mt-2 font-semibold">Card Information</h1>
+            <div className="cardIcons flex">
+              <img src={visa} alt="" className='cardIcon w-[15%] me-2'/>
+              <img src={master} alt="" className='cardIcon w-[15%]'/>
+            </div>
+            <input type="password" placeholder='Card Number' className='border-b-2 border-gray-300'/>
+            <div className="cardInfo flex mt-2">
+              <input type="text" placeholder='mm'  className='w-[33%] border-b-2 border-gray-300 me-2'/>
+              <input type="text" placeholder='yyyy'  className='w-[33%] border-b-2 border-gray-300 me-2'/>
+              <input type="text" placeholder='cvv'  className='w-[33%] border-b-2 border-gray-300 me-2'/>
+            </div>
+            <button className="payBtn w-full bg-green-500 outline-none mt-2">Checkout!</button>
           </div>
 
           </div>
