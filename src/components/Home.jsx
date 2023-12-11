@@ -174,26 +174,27 @@ function Home() {
 
             <button className="productButton cursor-pointer bg-black text-white text-[12px] sm:text-[18px] rounded-lg py- sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[22%] sm:bottom-[18%] right-[22%] sm:right-[30%] hover:text-black hover:bg-white hover:font-semibold">Buy Now</button>
 
-            <div className="payment absolute top-[-10%] left-[0] right-0 bottom-0 m-auto py-[20px] px-[40px] w-[180px] sm:w-[400px] h-[180px] sm:h-[430px] bg-white flex flex-col rounded-xl">
+            <div className="payment absolute top-[-10%] left-[0] right-0 bottom-0 m-auto py-[10px] px-[40px] w-[180px] sm:w-[400px] h-[180px] sm:h-[430px] bg-white flex flex-col rounded-xl">
             <h1 className="payTitle text-gray-500 text-[20px] font-semibold">Personal Information</h1>
             <label htmlFor="" className='text-[14px] mt-2'>Name and Surname</label>
-            <input type="text" placeholder='John Doe' className='payInput p-[6px] border-b-2 border-gray-300'/>
+            <input type="text" placeholder='John Doe' className='payInput p-[6px] border-b-2 border-gray-300 pb-0 outline-none'/>
             <label htmlFor="" className='text-[14px] mt-2'>Phone Number</label>
-            <input type="text" placeholder='+1 234 5678' className='payInput p-[6px] border-b-2 border-gray-300'/>
+            <input type="text" placeholder='+1 234 5678' className='payInput p-[6px] border-b-2 border-gray-300 pb-0 outline-none'/>
             <label htmlFor="" className='text-[14px] mt-2'>Address</label>
-            <input type="text" placeholder='Elton St 21-22-145' className='payInput p-[6px] border-b-2 border-gray-300'/>
+            <input type="text" placeholder='Elton St 21-22-145' className='payInput p-[6px] border-b-2 border-gray-300 pb-0 outline-none'/>
             <h1 className="payTitle text-gray-500 text-[20px] mt-2 font-semibold">Card Information</h1>
             <div className="cardIcons flex">
               <img src={visa} alt="" className='cardIcon w-[15%] me-2'/>
               <img src={master} alt="" className='cardIcon w-[15%]'/>
             </div>
-            <input type="password" placeholder='Card Number' className='border-b-2 border-gray-300'/>
+            <input type="password" placeholder='Card Number' className='border-b-2 border-gray-300 outline-none px-[6px]'/>
             <div className="cardInfo flex mt-2">
-              <input type="text" placeholder='mm'  className='w-[33%] border-b-2 border-gray-300 me-2'/>
-              <input type="text" placeholder='yyyy'  className='w-[33%] border-b-2 border-gray-300 me-2'/>
-              <input type="text" placeholder='cvv'  className='w-[33%] border-b-2 border-gray-300 me-2'/>
+              <input type="text" placeholder='mm'  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px]'/>
+              <input type="text" placeholder='yyyy'  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px]'/>
+              <input type="text" placeholder='cvv'  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px]'/>
             </div>
-            <button className="payBtn w-full bg-green-500 outline-none mt-2">Checkout!</button>
+            <button className="payBtn w-full bg-green-500 outline-none mt-3 py-1 rounded-md text-white font-semibold">Checkout!</button>
+            <button className='absolute right-[8%] top-[6%] bg-gray-300 px-2 border border-black'>X</button>
           </div>
 
           </div>
