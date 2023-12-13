@@ -185,7 +185,7 @@ function Home() {
             <label htmlFor="infoName" className='text-[10px] sm:text-[14px] sm:mt-2'>Name and Surname</label>
             <input type="text" id="infoName" placeholder='John Doe' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
             <label htmlFor="infoNumb" className='text-[10px] sm:text-[14px] sm:mt-2'>Phone Number</label>
-            <input type="number" id='infoNumb' pattern="\d*" maxlength="10" placeholder='+1 234 5678' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
+            <input type="number" id='infoNumb' pattern="\d*" maxLength="10" placeholder='+1 234 5678' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
             <label htmlFor="infoAdd" className='text-[10px] sm:text-[14px] sm:mt-2'>Address</label>
             <input type="text" id='infoAdd' placeholder='Elton St 21-22-145' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
             <h1 className="payTitle text-gray-500 text-xs sm:text-[20px] mt-1 sm:mt-2 font-semibold">Card Information</h1>
@@ -193,11 +193,11 @@ function Home() {
               <img src={visa} alt="" className='cardIcon w-[15%] me-2 cursor-pointer'/>
               <img src={master} alt="" className='cardIcon w-[15%] cursor-pointer'/>
             </div>
-            <input type="password" maxlength="16" placeholder='Card Number' className='border-b-2 border-gray-300 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+            <input type="password" maxLength="16" placeholder='Card Number' className='border-b-2 border-gray-300 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
             <div className="cardInfo flex mt-1 sm:mt-2">
-              <input type="text" placeholder='mm' maxlength="2" className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
-              <input type="text" placeholder='yyyy' maxlength="2" className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
-              <input type="password" placeholder='cvv' maxlength="3"  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+              <input type="text" placeholder='mm' maxLength="2" className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+              <input type="text" placeholder='yyyy' maxLength="2" className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+              <input type="password" placeholder='cvv' maxLength="3"  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
             </div>
             <button className="payBtn w-full bg-green-500 outline-none mt-1 sm:mt-3 sm:py-1 rounded-md text-white text-[12px] sm:text-[16px] font-semibold">Checkout!</button>
             <button className='absolute right-[5%] sm:right-[6%] top-[4%] sm:top-[4%] bg-gray-300 px-[2px] sm:px-2 leading-3 text-xs sm:leading-6 border border-black' onClick={()=>{setBuyPanel({transform: 'scale(0)', transition: 'all ease 0.4s'})}}>X</button>
@@ -217,7 +217,8 @@ function Home() {
       </div>
       ))}
     </div>
-    <div className="newSeason flex bg-[#111111]">
+    <div 
+    className="newSeason flex bg-[#111111]">
       <div className="nsItem w-[33.3%] p-[3vw]">
         <img src="https://images.unsplash.com/photo-1527010154944-f2241763d806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="" className="nsImg w-full h-full object-cover" />
       </div>
@@ -226,7 +227,7 @@ function Home() {
         <h1 className="nsTitle text-sm sm:text-[30px] font-semibold uppercase">New Season Arrivals</h1>
         <h1 className="nsTitle text-sm sm:text-[30px] font-semibold uppercase">New Collection</h1>
         <a href="#">
-          <button className='nsButton bg-white text-[10px] sm:text-[20px] text-black leading-3 sm:leading-none w-[80%] sm:w-auto p-1 sm:p-[15px] font-semibold rounded-lg sm:rounded-none'>Choose Your Style</button>
+          <button className='nsButton bg-white text-[10px] sm:text-[20px] text-black leading-3 sm:leading-none w-[80%] sm:w-auto p-1 sm:p-[15px] font-semibold rounded-lg sm:rounded-none hover:border-2 hover:border-white hover:bg-transparent hover:text-white'>Choose Your Style</button>
         </a>
       </div>
       <div className="nsItem w-[33.3%] p-[3vw]">

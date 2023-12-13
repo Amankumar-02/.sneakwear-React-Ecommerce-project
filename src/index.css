@@ -16,6 +16,12 @@
   height: 2px;
   animation: progressBar 1s linear infinite;
 }
+.fListItem:hover #footerProgressBar{
+  /* background-color: gray; */
+  height: 2px;
+  animation: progressBar 1s linear infinite;
+  margin-bottom: 2px;
+}
 .priceProgressBar{
   animation: progressBar 2s ease-in-out infinite alternate;
 }
