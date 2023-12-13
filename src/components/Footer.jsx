@@ -35,24 +35,24 @@ function Footer() {
         ))}
       </div>
       <div className="footerRight w-[35%] h-full py-[24px] bg-green-400 sm:bg-green-500 flex flex-col justify-between items-center">
-        <div className="footerRightMenu">
-          <h1 className="fMenuTitle text-lg -tracking-tighter">Subscribe to our newsletter</h1>
-          <div className="fMenuMail">
-            <input type="text" placeholder='your@email.com' className='p-[5px] outline-none'/>
-            <button className='fMenuButton ms-1 p-[5px] bg-black text-white hover:border hover:border-black hover:text-black hover:bg-transparent hover:font-semibold'>Join !</button>
+        <div className="footerRightMenu w-[90%] sm:w-auto">
+          <h1 className="fMenuTitle text-xs leading-3 sm:w-full sm:text-lg -tracking-tighter">Subscribe to our newsletter</h1>
+          <div className="fMenuMail mt-1 sm:mt-0">
+            <input type="text" placeholder='your@email.com' className='fMenuInput px-1 sm:p-[5px] outline-none w-[100%] sm:w-auto'/>
+            <button className='fMenuButton sm:ms-1 sm:p-[5px] text-[12px] sm:text-[16px] bg-black text-white hover:border hover:border-black hover:text-black hover:bg-transparent hover:font-semibold block sm:inline-block w-full sm:w-auto'>Join !</button>
           </div>
         </div>
-        <div className="footerRightMenu flex my-5">
-          <h1 className="fMenuTitle text-xl">Follow Us</h1>
-          <div className="fIcons ms-[30px]">
-          <i className="ri-facebook-circle-line me-2 text-2xl cursor-pointer hover:text-[28px]"></i>
-          <i className="ri-twitter-x-line me-2 text-2xl cursor-pointer hover:text-[28px]"></i>
-          <i className="ri-instagram-line me-2 text-2xl cursor-pointer hover:text-[28px]"></i>
-          <i className="ri-whatsapp-line text-2xl cursor-pointer hover:text-[28px]"></i>
+        <div className="footerRightMenu flex my-2 sm:my-5 w-[90%] sm:w-auto">
+          <h1 className="fMenuTitle text-xs sm:text-xl">Follow Us</h1>
+          <div className="fIcons sm:ms-[30px]">
+          <i className="ri-facebook-circle-line me-2 text-sm sm:text-2xl cursor-pointer hover:text-[18px] sm:hover:text-[28px]"></i>
+          <i className="ri-twitter-x-line me-2 text-sm sm:text-2xl cursor-pointer hover:text-[18px] sm:hover:text-[28px]"></i>
+          <i className="ri-instagram-line me-2 text-sm sm:text-2xl cursor-pointer hover:text-[18px] sm:hover:text-[28px]"></i>
+          <i className="ri-whatsapp-line text-sm sm:text-2xl cursor-pointer hover:text-[18px] sm:hover:text-[28px]"></i>
           </div>
         </div>
-        <div className="footerRightMenu">
-          <span className="copyRight"><i class="ri-at-line"></i>AmanKr. All rights reserved, 2024.</span>
+        <div className="footerRightMenu w-[90%] sm:w-auto hidden sm:inline-block">
+          <span className="copyRight text-[10px] sm:text-[16px]"><i class="ri-at-line"></i>AmanKr. All rights reserved, 2024.</span>
         </div>
       </div>
     </div>

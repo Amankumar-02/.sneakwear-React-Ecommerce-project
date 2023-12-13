@@ -58,6 +58,7 @@
   .productDesc1{
     display: inline-block;
   }
+  
 }
 
 .payment{
@@ -67,4 +68,9 @@ box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
 
 .fIcons{
   transition: all 0.8s ease-in-out;
+}
+
+
+.fMenuInput::placeholder{
+  font-size: 12px;
 }
