@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
         <div className="footerRightMenu w-[90%] sm:w-auto hidden sm:inline-block">
-          <span className="copyRight text-[10px] sm:text-[16px]"><i class="ri-at-line"></i>AmanKr. All rights reserved, 2024.</span>
+          <span className="copyRight text-[10px] sm:text-[16px]"><i className="ri-at-line"></i>AmanKr. All rights reserved, 2024.</span>
         </div>
       </div>
     </div>
