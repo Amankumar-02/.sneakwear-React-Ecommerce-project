@@ -11,13 +11,13 @@ function Home() {
     {img:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/5e134d85-5475-41c2-bc7f-b651e3185e2f/variations/Default_nike_air_jordan_blue_sneaker_0_5e134d85-5475-41c2-bc7f-b651e3185e2f_0.png", color:"bg-blue-500", text:"text-blue-500" , title:"blazer", price:"$149"},
     {img:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/3810e149-a135-4289-9f34-505af9ad68a1/variations/Default_create_nike_air_jordan_shoe_in_black_2_3810e149-a135-4289-9f34-505af9ad68a1_0.png", color:"bg-gray-500", text:"text-gray-500", title:"crater", price:"$179"},
     {img:"https://cdn.leonardo.ai/users/36eaba97-5f1a-4a31-a92a-b2ea8256702f/generations/479182a9-ff0e-4bf6-814d-0aca04cd0706/variations/Default_green_air_jordan_sneaker_3_479182a9-ff0e-4bf6-814d-0aca04cd0706_0.png", color:"bg-green-500", text:"text-green-500", title:"hippie", price:"$159"},
-  ]
+  ];
   const featureData = [
     {img:"https://img.icons8.com/?size=200&id=8290&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/free-shipping.png", title:"Free Shipping", desc:"Free Worldwide Shipping On All Orders."},
     {img:"https://img.icons8.com/?size=200&id=UhclbL6j7ysE&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/return-purchase.png", title:"30 Days Return", desc:"Easy Refund In 14 Days"},
     {img:"https://img.icons8.com/?size=200&id=36069&format=png&color=EF4444", img2:"https://img.icons8.com/external-icongeek26-outline-icongeek26/200/EF4444/external-Gift-Card-e-commerce-icongeek26-outline-icongeek26.png", title:"Gift Cards", desc:"Buy Gifts Card And Use Coupon Code Easily"},
     {img:"https://img.icons8.com/?size=200&id=t1QhJ1rCvYZA&format=png&color=EF4444", img2:"https://img.icons8.com/wired/200/EF4444/paper-plane.png", title:"Contact Us", desc:"Keep In Touch Via Email And Support System."},
-  ]
+  ];
   const [productData, setProductData] = useState([
     {
       title: "",
@@ -90,6 +90,11 @@ function Home() {
       },
     },
   ]);
+  const galleryData = [
+    {img:"https://images.unsplash.com/photo-1514989940723-e8e51635b782?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", title:"Be Yourself!"},
+    {img:"https://images.unsplash.com/photo-1579199265916-436a773ce30b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", title:"First day of your new life"},
+    {img:"https://images.unsplash.com/photo-1490168105446-f43395eb50b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80", title:"Just do it!"},
+  ]
   const [buyPanel, setBuyPanel] = useState({transform: 'scale(0)', transition: 'all ease 0.4s'})
   const storeData = useSelector(state=>state.slider);
   const productToggle1 = (index)=>{
@@ -203,7 +208,31 @@ function Home() {
         ))}
       </div>
     </div>
-
+    <div 
+    className="gallery p-[10px] sm:p-[50px] flex">
+      {galleryData.map((data, index)=>(
+      <div key={index} className="galleryItem w-[33.3%] p-[10px] sm:p-[50px]">
+        <h1 className="galleryTitle text-center text-[10px] sm:text-2xl font-semibold mb-1 sm:mb-2">{data.title}</h1>
+        <img src={data.img} alt="" className="galleryImg w-[100%]" />
+      </div>
+      ))}
+    </div>
+    <div className="newSeason flex bg-[#111111]">
+      <div className="nsItem w-[33.3%] p-[3vw]">
+        <img src="https://images.unsplash.com/photo-1527010154944-f2241763d806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="" className="nsImg w-full h-full object-cover" />
+      </div>
+      <div className="nsItem w-[33.3%] py-8 sm:py-[150px] text-white flex flex-col justify-between items-center text-center">
+        <h3 className="nsTitleSm text-xs sm:text-[24px] uppercase">Winter New Arrivals</h3>
+        <h1 className="nsTitle text-sm sm:text-[30px] font-semibold uppercase">New Season Arrivals</h1>
+        <h1 className="nsTitle text-sm sm:text-[30px] font-semibold uppercase">New Collection</h1>
+        <a href="#">
+          <button className='nsButton bg-white text-[10px] sm:text-[20px] text-black leading-3 sm:leading-none w-[80%] sm:w-auto p-1 sm:p-[15px] font-semibold rounded-lg sm:rounded-none'>Choose Your Style</button>
+        </a>
+      </div>
+      <div className="nsItem w-[33.3%] p-[3vw]">
+        <img src="https://images.unsplash.com/photo-1599069692392-61fad306d9cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="" className="nsImg w-full h-full object-cover" />
+      </div>
+    </div>
     </>
   )
 }
