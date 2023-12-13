@@ -175,27 +175,27 @@ function Home() {
 
             <button className="productButton cursor-pointer bg-black text-white text-[12px] sm:text-[18px] rounded-lg py- sm:py-2 px-1 sm:px-4 border border-gray-300 absolute bottom-[22%] sm:bottom-[18%] right-[22%] sm:right-[30%] hover:text-black hover:bg-white hover:font-semibold" onClick={()=>{setBuyPanel({transform: 'scale(1)', transition: 'all ease 0.4s'})}}>Buy Now</button>
 
-            <div className="payment absolute top-[-10%] left-[0] right-0 bottom-0 m-auto py-[10px] px-[40px] w-[180px] sm:w-[400px] h-[180px] sm:h-[430px] bg-white flex flex-col rounded-xl" style={buyPanel}>
-            <h1 className="payTitle text-gray-500 text-[20px] font-semibold">Personal Information</h1>
-            <label htmlFor="" className='text-[14px] mt-2'>Name and Surname</label>
-            <input type="text" placeholder='John Doe' className='payInput p-[6px] border-b-2 border-gray-300 pb-0 outline-none'/>
-            <label htmlFor="" className='text-[14px] mt-2'>Phone Number</label>
-            <input type="text" placeholder='+1 234 5678' className='payInput p-[6px] border-b-2 border-gray-300 pb-0 outline-none'/>
-            <label htmlFor="" className='text-[14px] mt-2'>Address</label>
-            <input type="text" placeholder='Elton St 21-22-145' className='payInput p-[6px] border-b-2 border-gray-300 pb-0 outline-none'/>
-            <h1 className="payTitle text-gray-500 text-[20px] mt-2 font-semibold">Card Information</h1>
+            <div className="payment absolute top-[-10%] left-[0] right-0 bottom-0 m-auto py-[6px] sm:py-[10px] px-[20px] sm:px-[40px] w-[180px] sm:w-[400px] h-[210px] sm:h-[430px] bg-white flex flex-col rounded-xl" style={buyPanel}>
+            <h1 className="payTitle text-gray-500 text-xs sm:text-[20px] font-semibold sm:mt-2">Personal Information</h1>
+            <label htmlFor="infoName" className='text-[10px] sm:text-[14px] sm:mt-2'>Name and Surname</label>
+            <input type="text" id="infoName" placeholder='John Doe' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
+            <label htmlFor="infoNumb" className='text-[10px] sm:text-[14px] sm:mt-2'>Phone Number</label>
+            <input type="number" id='infoNumb' pattern="\d*" maxlength="10" placeholder='+1 234 5678' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
+            <label htmlFor="infoAdd" className='text-[10px] sm:text-[14px] sm:mt-2'>Address</label>
+            <input type="text" id='infoAdd' placeholder='Elton St 21-22-145' className='payInput px-[6px] sm:p-[6px] text-[8px] sm:text-[16px] border-b-2 border-gray-300 pb-0 outline-none'/>
+            <h1 className="payTitle text-gray-500 text-xs sm:text-[20px] mt-1 sm:mt-2 font-semibold">Card Information</h1>
             <div className="cardIcons flex">
-              <img src={visa} alt="" className='cardIcon w-[15%] me-2'/>
-              <img src={master} alt="" className='cardIcon w-[15%]'/>
+              <img src={visa} alt="" className='cardIcon w-[15%] me-2 cursor-pointer'/>
+              <img src={master} alt="" className='cardIcon w-[15%] cursor-pointer'/>
             </div>
-            <input type="password" placeholder='Card Number' className='border-b-2 border-gray-300 outline-none px-[6px]'/>
-            <div className="cardInfo flex mt-2">
-              <input type="text" placeholder='mm'  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px]'/>
-              <input type="text" placeholder='yyyy'  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px]'/>
-              <input type="text" placeholder='cvv'  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px]'/>
+            <input type="password" maxlength="16" placeholder='Card Number' className='border-b-2 border-gray-300 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+            <div className="cardInfo flex mt-1 sm:mt-2">
+              <input type="text" placeholder='mm' maxlength="2" className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+              <input type="text" placeholder='yyyy' maxlength="2" className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
+              <input type="password" placeholder='cvv' maxlength="3"  className='w-[33%] border-b-2 border-gray-300 me-2 outline-none px-[6px] text-[8px] sm:text-[16px]'/>
             </div>
-            <button className="payBtn w-full bg-green-500 outline-none mt-3 py-1 rounded-md text-white font-semibold">Checkout!</button>
-            <button className='absolute right-[8%] top-[6%] bg-gray-300 px-2 border border-black' onClick={()=>{setBuyPanel({transform: 'scale(0)', transition: 'all ease 0.4s'})}}>X</button>
+            <button className="payBtn w-full bg-green-500 outline-none mt-1 sm:mt-3 sm:py-1 rounded-md text-white text-[12px] sm:text-[16px] font-semibold">Checkout!</button>
+            <button className='absolute right-[5%] sm:right-[6%] top-[4%] sm:top-[4%] bg-gray-300 px-[2px] sm:px-2 leading-3 text-xs sm:leading-6 border border-black' onClick={()=>{setBuyPanel({transform: 'scale(0)', transition: 'all ease 0.4s'})}}>X</button>
           </div>
 
           </div>
