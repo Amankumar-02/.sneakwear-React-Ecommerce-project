@@ -38,11 +38,7 @@
 .product{
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  /* background-image: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"); */
-  /* background-image: url("https://wallpaperaccess.com/full/1283125.jpg"); */
-  /* background-image: url("https://toppng.com/uploads/preview/dark-textured-background-11553990989zn87xp7tfb.jpg"); */
   background-image: url("https://t4.ftcdn.net/jpg/02/42/98/73/360_F_242987371_xIZwfi5XNNgM8yof2Gy9Bxh3brXLt50g.jpg");
-  /* background-image: url("https://wallpapers.com/images/featured/dark-wall-background-zdnfze1amg2r36vi.jpg"); */
   background-position:bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,4 +63,8 @@
 .payment{
   -webkit-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87); 
 box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
+}
+
+.fIcons{
+  transition: all 0.8s ease-in-out;
 }
