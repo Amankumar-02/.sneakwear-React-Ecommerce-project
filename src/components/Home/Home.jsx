@@ -206,6 +206,9 @@ function Home() {
       </div>
       ))}
     </div>
+    <div id='cartItems'>
+
+    </div>
     <div id='newSeason'
     className="newSeason flex bg-[#111111]">
       <div className="nsItem w-[33.3%] p-[3vw]">

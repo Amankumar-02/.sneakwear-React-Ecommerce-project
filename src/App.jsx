@@ -1,4 +1,3 @@
-import './App.css';
 import {Header, Home, Footer} from './components/Index.js'
 
 function App() {
