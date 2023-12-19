@@ -35,7 +35,7 @@ function Footer() {
           </div>
         ))}
       </div>
-      <div className="footerRight w-[35%] h-full py-[24px] bg-green-400 sm:bg-green-500 flex flex-col justify-between items-center">
+      <div className="footerRight w-[35%] h-full py-[24px] bg-red-500 flex flex-col justify-between items-center">
         <div className="footerRightMenu w-[90%] sm:w-auto">
           <h1 className="fMenuTitle text-xs leading-3 sm:w-full sm:text-lg -tracking-tighter">Subscribe to our newsletter</h1>
           <div className="fMenuMail mt-1 sm:mt-0">

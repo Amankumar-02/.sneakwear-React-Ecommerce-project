@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import 'remixicon/fonts/remixicon.css';
 import './Home.css';
+
+import Products from '../AddCart/products/Products';
+import Recommended from '../AddCart/recommended/Recommended';
+import {SideBar} from '../AddCart/sidebar/index';
+
 import { useSelector } from 'react-redux';
 import visa from '../../img/visa.png';
 import master from '../../img/master.png';
 import { slideData, featureData, galleryData } from '../../dataBase';
 
-function Home() {
+function Home({
+  handleRadioChange,
+  handleClick,
+  result
+}) {
   const [productData, setProductData] = useState([
     {
       title: "",
@@ -82,7 +91,7 @@ function Home() {
 
   const [buyPanel, setBuyPanel] = useState({transform: 'scale(0)', transition: 'all ease 0.4s'});
 
-  const storeData = useSelector(state=>state.slider);
+  const storeData = useSelector(state=>state.slide.slider);
 
   const productToggle1 = (index)=>{
     setProductData(prevProductData => {
@@ -206,8 +215,10 @@ function Home() {
       </div>
       ))}
     </div>
-    <div id='cartItems'>
-
+    <div id='cartItems' className='relative'>
+      <SideBar handleRadioChange={handleRadioChange}/>
+      <Recommended handleClick={handleClick}/>
+      <Products result={result} />
     </div>
     <div id='newSeason'
     className="newSeason flex bg-[#111111]">
