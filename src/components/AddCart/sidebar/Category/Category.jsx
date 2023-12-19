@@ -5,7 +5,7 @@ function Category({handleRadioChange}) {
   return (
     <>
       <div>
-        <h2 className="sidebar-title text-md sm:text-[1.5em] font-bold mt-[20px] mb-[8px] sm:my-[20px]">
+        <h2 className="sidebar-title text-md sm:text-[1.5em] font-bold mb-[8px] sm:my-[20px]">
           Category
         </h2>
         <div className="">
