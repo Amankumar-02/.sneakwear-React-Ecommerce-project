@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'remixicon/fonts/remixicon.css';
+import './Header.css'
 import {updateStyle} from '../features/slider/sliderSlice';
 import { useDispatch } from 'react-redux';
 
