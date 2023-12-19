@@ -62,7 +62,7 @@ function Header({handleInputChange}) {
           <div className='flex items-center'>
           <div className="profile-container">
           <a href="#" className="me-3 text-lg"><i className="ri-heart-line"></i></a>
-          <a href="#cartItems" className="me-3 text-lg openCart" onClick={()=>{setOpenCart({left:"calc(100% - 300px", transition: '0.5s'})}}><i className="ri-shopping-cart-2-line relative"><span className="absolute left-[50%] bg-red-500 rounded-lg px-1 text-[10px] leading-4">0</span></i></a>
+          <a href="#cartItems" className="me-3 text-lg openCart" onClick={()=>{setOpenCart({left:"calc(100% - 300px", transition: '0.5s'})}}><i className="ri-shopping-cart-2-line relative"><span className="absolute left-[50%] bg-red-500 rounded-lg px-1 text-[10px] leading-4">1</span></i></a>
           <a href="#" className="me-3 text-lg"><i className="ri-user-add-fill"></i></a>
           </div>
           <div id="progressBarText" className="navItem">
