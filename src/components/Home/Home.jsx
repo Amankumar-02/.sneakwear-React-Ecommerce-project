@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import 'remixicon/fonts/remixicon.css';
 import './Home.css';
 import { useSelector } from 'react-redux';
-import visa from '../img/visa.png';
-import master from '../img/master.png';
-import { slideData, featureData, galleryData } from '../dataBase';
+import visa from '../../img/visa.png';
+import master from '../../img/master.png';
+import { slideData, featureData, galleryData } from '../../dataBase';
 
 function Home() {
   const [productData, setProductData] = useState([
